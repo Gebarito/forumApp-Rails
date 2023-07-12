@@ -1,0 +1,10 @@
+%h1 Index
+
+
+- @posts.each do |post|
+ %h2= post.title
+ %p
+ Criado a
+ = time_ago_in_words(post.created_at)
+= link_to "New Post", new_post_path
+
